@@ -2,6 +2,7 @@
 # define FIXED_H
 
 #include <iostream>
+#include <math.h>
 
 class Fixed
 {
@@ -12,11 +13,17 @@ class Fixed
 	public:
 		Fixed();
 		Fixed(Fixed const &src);
+		Fixed(int const nbr);
+		Fixed(float const nbr);
 		Fixed &operator=(Fixed const &rhs);
 		~Fixed();
 
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
+		float	toFloat( void ) const;
+		int		toInt( void ) const;
 };
+
+std::ostream	&operator<<(std::ostream &o, Fixed const &i);
 
 #endif
