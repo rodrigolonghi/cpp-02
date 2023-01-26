@@ -1,7 +1,7 @@
 NAME	=	fixed
 
 CC	=	c++
-FLAGS	=	-Wall -Wextra -Werror -std=c++98
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 SRC	=	main.cpp \
 		Fixed.cpp
